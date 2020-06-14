@@ -7,12 +7,14 @@ class Config:
     SECRET_KEY = os.getenv('RUBIK_API_SECRET_KEY', 'rubik_api_default_secret_key')
     DEBUG = False
     DATABASE_URI = ''
+    LOG_SQL = False
 
 
 class DevConfig(Config):
     DEBUG = True
     DATABASE_URI = 'sqlite:///' + os.path.join(basedir, './', 'rubik_api_dev.db')
     # DATABASE_URI = 'mysql://dev:dev321@localhost/almbic_test'
+    LOG_SQL = True
 
 
 class TestConfig(Config):
