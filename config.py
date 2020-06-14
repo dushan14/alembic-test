@@ -11,8 +11,8 @@ class Config:
 
 class DevConfig(Config):
     DEBUG = True
-    # DATABASE_URI = 'sqlite:///' + os.path.join(basedir, './', 'rubik_api_dev.db')
-    DATABASE_URI = 'mysql://dev:dev321@localhost/almbic_test'
+    DATABASE_URI = 'sqlite:///' + os.path.join(basedir, './', 'rubik_api_dev.db')
+    # DATABASE_URI = 'mysql://dev:dev321@localhost/almbic_test'
 
 
 class TestConfig(Config):
@@ -32,4 +32,4 @@ config_by_name = dict(
     prod=ProdConfig
 )
 
-ACTIVATED_CONFIG = config_by_name[os.getenv('RUBIK_API_CONFIG') or 'test']
+ACTIVATED_CONFIG = config_by_name[os.getenv('RUBIK_API_CONFIG') or 'dev']
