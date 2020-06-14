@@ -14,7 +14,7 @@ class DevConfig(Config):
     DEBUG = True
     DATABASE_URI = 'sqlite:///' + os.path.join(basedir, './', 'rubik_api_dev.db')
     # DATABASE_URI = 'mysql://dev:dev321@localhost/almbic_test'
-    LOG_SQL = True
+    LOG_SQL = False
 
 
 class TestConfig(Config):
